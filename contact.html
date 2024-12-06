@@ -1,165 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="css/animate.compat.css" rel="stylesheet" type="text/css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Quick links to social media platforms.">
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/animate.compat.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="Images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="Images/favicon.png" sizes="180x180">
+    <link rel="icon" href="Images/favicon.png" sizes="192x192">
+    <link rel="icon" href="Images/favicon.png" sizes="512x512">
+
     <script defer src="js/scripts.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
     <title>Nailed IT</title>
 
-        <!-- Link to the manifest file -->
-        <link rel="manifest" href="manifest.json">
-
-        <!-- Meta tags for PWA -->
-        <meta name="theme-color" content="#00000">
-        <meta name="description" content="Quick links to social media platforms.">
-    
-        <!-- Link to Favicon (using favicon.png for all devices) -->
-        <link rel="icon" href="Images/favicon.png" type="image/png">
-        
-        <!-- Add other icon sizes for different devices (all pointing to favicon.png) -->
-        <link rel="apple-touch-icon" href="Images/favicon.png" sizes="180x180">
-        <link rel="icon" href="Images/favicon.png" sizes="192x192">
-        <link rel="icon" href="Images/favicon.png" sizes="512x512">
-    
-
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #000000;
+        /* Resetting some default styles */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+        }
+
+        /* Centering the content */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            background-image: url('Images/vanbackfade.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-image: url('Images/vanbackfade.png'); /* Adjust path if necessary */
-            background-size: cover; /* Ensure the background covers the entire viewport */
-            background-position: center; /* Center the background image */
-            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            color: #fff;
+            height: 100vh; /* Full viewport height */
         }
+
+        /* Container styling */
         .container {
-            background-color: #00000000;
+            background-color: rgba(0, 0, 0, 0.5);
             width: 90%;
             max-width: 400px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         h1 {
             margin-bottom: 20px;
             font-size: 2em;
-            color: #ffffff;
-        }
-        .link-button {
-            display: block;
-            background-color: #581212be;
-            color: white;
-            padding: 15px;
-            margin: 10px 0;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .link-button:hover {
-            background-color: #270000;
-            color: black;
+            color: rgba(255, 255, 255, 0.66);
         }
 
+        p {
+            font-size: 18px;
+            margin-top: -16px;
+            color: #581212;
+        }
 
-        
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            justify-items: center;
-            max-width: 300px;
+        /* Fixed position logo */
+        img {
+            height: 10vh;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 2vh;
+            z-index: 10;
+        }
+
+        /* Styling for the iframe */
+        iframe {
             width: 100%;
+            max-width: 740px; /* Adjust to fit your needs */
+            height: 581px;
+            border: none;
         }
-        .social-badge {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        .social-badge:hover {
-            transform: scale(1.1);
-            background-color: #45a049;
-        }
-        .social-badge img {
-            width: 24px;
-            height: 24px;
-        }
-
-        
     </style>
-
-
 </head>
 
 <body>
-<a href="index.html">    
-    <img src="Images/naileditlogored.png" alt="" style="height: 10vh; position: fixed; top: 0; margin-top: 12vh; left: 50%; transform: translateX(-50%); z-index: 10;">   
-</a>
+
+    <a href="index.html">
+        <img src="Images/naileditlogored.png" alt="Nailed It Logo">
+    </a>
+
     <div class="container">
-        <h1 style="color: rgba(255, 255, 255, 0.66);">Standing by...</h1>
-<p style="font-size: 18px; margin-top: -16px; color: #581212;">Click the bubble to chat.</p>
-   <!-- 
-          <a style="font-size: 29px;" href="index.html" class="link-button" target="_blank">Home</a>
-    <a href="https://facebook.com" class="link-button" target="_blank">About Us</a>
-    <a href="https://instagram.com" class="link-button" target="_blank">Services</a>
-    <a href="https://twitter.com" class="link-button" target="_blank">Gallery</a>
-    <a href="https://linkedin.com" class="link-button" target="_blank">Terms</a>
-    <a style="background-color: #00180bc0; font-size: 28px;" href="https://linkedin.com" class="link-button" target="_blank">Pay Your Bill</a>
-    -->
+  
 
-</div>
+        <!-- Form iframe centered -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdtmbSl3L33BUYz058P8qpFbpEREIONEKYGtg-7n-q9RElRdQ/viewform?embedded=true"></iframe>
+    </div>
 
-
-<script>
-    // Register the service worker
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('service-worker.js').then((registration) => {
-                console.log('Service Worker registered with scope:', registration.scope);
-            }).catch((error) => {
-                console.log('Service Worker registration failed:', error);
+    <script>
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then((registration) => console.log('Service Worker registered with scope:', registration.scope))
+                    .catch((error) => console.log('Service Worker registration failed:', error));
             });
-        });
-    }
-</script>
+        }
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6752874d2480f5b4f5a87e2d/1ied6120f';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+        // Tawk.to script for chat functionality
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6752874d2480f5b4f5a87e2d/1ied6120f';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
-    <!--End of Tawk.to Script-->
 
-
-    <script src="js/wow.min.js"></script>
-    <script> new WOW().init();</script>
-    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
