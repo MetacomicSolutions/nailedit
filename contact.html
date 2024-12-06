@@ -108,29 +108,7 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdtmbSl3L33BUYz058P8qpFbpEREIONEKYGtg-7n-q9RElRdQ/viewform?embedded=true"></iframe>
     </div>
 
-    <script>
-        // Service Worker registration
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js')
-                    .then((registration) => console.log('Service Worker registered with scope:', registration.scope))
-                    .catch((error) => console.log('Service Worker registration failed:', error));
-            });
-        }
 
-        // Tawk.to script for chat functionality
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6752874d2480f5b4f5a87e2d/1ied6120f';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
 
 </body>
 
