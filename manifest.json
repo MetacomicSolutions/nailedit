@@ -1,0 +1,22 @@
+{
+    "name": "Nailed IT",
+    "short_name": "Nailed IT",
+    "description": "Nailed IT App",
+    "start_url": "/app.html",
+    "background_color": "#f5f5f5",
+    "theme_color": "#00000",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "Images/favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "images/favicon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
