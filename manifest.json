@@ -2,8 +2,8 @@
     "name": "Nailed IT",
     "short_name": "Nailed IT",
     "description": "Nailed IT App",
-    "start_url": "/app.html",
-    "background_color": "#f5f5f5",
+    "start_url": "https://metacomicsolutions.github.io/nailedit/app.html",
+    "background_color": "#000000",
     "theme_color": "#00000",
     "display": "standalone",
     "icons": [
