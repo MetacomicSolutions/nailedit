@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: black;
+        }
+        body {
+            background-color: black;
+            background-image: url('Naileditglitch1.gif');
+            background-size: cover; /* Ensures the image covers the whole screen */
+            background-position: center center; /* Centers the image */
+            background-attachment: fixed; /* Makes the background fixed when scrolling */
+            margin: 0; /* Removes default margin */
+            height: 100vh; /* Ensures the body takes up the full height of the viewport */
+            display: flex; /* Enables flexbox */
+            flex-direction: column; /* Stacks the items vertically */
+            justify-content: flex-start; /* Keeps the content starting from the top */
+            align-items: center; /* Centers the content horizontally */
+            position: relative; /* To position the first image absolutely */
+        }
+
+        /* Style for the first image */
+        .first-img {
+            position: absolute; /* Pins it to the top */
+            top: 20px; /* 20px from the top */
+            width: 150px; /* Make it small */
+            height: auto; /* Keeps the aspect ratio */
+        }
+
+        /* Style for the second image */
+        .second-img {
+            margin-top: 200px; /* Adds space between the first and second image */
+            max-width: 80%; /* Resize the image to 80% of the viewport width */
+            max-height: 60%; /* Resize the image to 60% of the viewport height */
+            object-fit: contain; /* Ensures the image scales without distortion */
+        }
+
+        /* Style for the "Coming Soon" text */
+        .coming-soon {
+            font-family: 'Arial', sans-serif; /* You can change the font */
+            font-size: 2.5rem; /* Large text */
+            color: white; /* White text color */
+            text-align: center; /* Centered text */
+            margin-top: 40px; /* Adds space between the second image and the text */
+            font-weight: bold; /* Makes the text bold */
+            text-transform: uppercase; /* Uppercase text */
+        }
+
+        /* Style for the disclaimer text */
+        .disclaimer {
+            font-family: 'Arial', sans-serif;
+            font-size: 1rem; /* Smaller text */
+            color: #bbb; /* Light grey color for the disclaimer */
+            text-align: center; /* Centered text */
+            margin-top: 20px; /* Adds space between the "Coming Soon" text and the disclaimer */
+            font-style: italic; /* Italics for the disclaimer */
+        }
+    </style>
+</head>
+<body>
+    <!-- First image pinned to the top -->
+    <img class="first-img" src="nailedit.png" alt="First Image">
+    
+    <!-- Second image centered in the middle -->
+    <img class="second-img" src="Nailedit_laptop.png" alt="Centered Image">
+
+    <!-- "Coming Soon" text -->
+    <div class="coming-soon">
+        Coming Soon
+    </div>
+
+    <!-- Disclaimer text -->
+    <div class="disclaimer">
+        *Disclaimer: The product is still under development and may change before release.
+    </div>
+</body>
+</html>
